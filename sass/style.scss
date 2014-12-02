@@ -1,0 +1,184 @@
+@import 'reset';
+
+$dark: #111;
+$medium: #333;
+$light: #999;
+
+html {
+	diplay: block;
+	width: 100%;
+	height: 100%;
+	//background: #eee;
+	position: relative;
+}
+
+body {
+	display: block;
+	width: 8.5in;
+	height: 11in;
+	/*width: 63vw;
+	height: 82.5vw;
+	background: #fff;
+	position: relative;
+	border: 1px solid #ddd;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;*/
+	position: relative;
+	margin: 8.25vw auto;
+}
+
+main.document {
+	//font-size: 1vw;
+	font-size: .8em;
+	font-family: Century Schoolbook;
+	line-height: 1;
+	color: $medium;
+	padding: 2.5em 5em 5em 5em;
+}
+
+.document .heading {
+	font-family: Recta-Bold;
+}
+
+.document .link {
+	display: inline-block;
+	text-decoration: none;
+	font-weight: inherit;
+	color: inherit;
+	border-bottom: 1px solid transparent;
+	margin-bottom: -1px;
+	&:hover {
+		color: #000;
+		border-bottom: 1px solid $light;
+	}
+}
+
+.document header.mast {
+	width: 100%;
+	float: left;
+	padding: 0 0 .25em 0;
+	.name {
+		display: block;
+		float: left;
+		font-family: Recta-Bold;
+		font-size: 2.5em;
+	}
+	.title {
+		display: block;
+		float: right;
+		font-family: Recta-Bold;
+		font-size: 2.5em;
+	}
+	.summary {
+		padding-top: 1.5em;
+		display: block;
+		clear: both;
+		font-family: CentSchbook Mono BT;
+		text-transform: uppercase;
+		line-height: 1.5;
+	}
+}
+
+.document .section {
+	width: 100%;
+	float: left;
+	margin-top: 1.5em;
+	h2.heading {
+		font-size: 1.25em;
+		padding-bottom: .25em;
+		display: block;
+		border-bottom: 1px solid $light;
+	}
+	h3.heading {
+		float: left;
+		padding: .25em .25em 0 0;
+		display: none;
+	}
+	.engagements {
+		float: right;
+		width: 100%;
+		.engagement {
+			padding-top: 1.25em;
+			float: left;
+			width: 100%;
+			clear: both;
+			.organization {
+				.name {
+					color: $dark;
+					font-weight: bold;
+					padding-bottom: .25em;
+					float: left;
+				}
+			}
+			.position {
+				float: left;
+				font-style: italic;
+				color: $light;
+				margin-left: .25em;
+			}
+		}
+		.meta {
+			address.location {
+				display: block;
+				float: right;
+				clear: right;
+				text-align: right;
+				color: $light;
+				padding-bottom: .25em;
+			}
+			time.date {
+				display: block;
+				color: $light;
+				float: left;
+				clear: left;
+				width: 15%;
+			}
+		}
+		.description {
+			margin-left: 15%;
+			padding-top: .5em;
+			line-height: 1.25;
+			clear: both;
+			color: $medium;
+		}
+	}
+}
+
+.document .section#affiliations {
+	.organizations {
+		margin-top: 1em;
+		.organization {
+			display: inline-block;
+			&:after {
+				content: ',';
+				margin-left: -.25em;
+			}
+			&:last-child:after {
+				content: '.';
+			}
+		}
+	}
+}
+
+.document footer.contact {
+	position: absolute;
+	bottom: 2em;
+	left: 5em;
+	right: 5em;
+	color: $light;
+	.methods {
+		display: block;
+		line-height: 1.5;
+		.method {
+			float: left;
+			width: 50%;
+			display: block;
+			&.address {
+				float: right;
+				text-align: right;
+			}
+		}
+	}
+}
